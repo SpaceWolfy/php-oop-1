@@ -26,21 +26,23 @@ class Movie
   public function dataPrint()
   {
     echo $this->poster;
+    echo '<div class="text">';
     echo '<h2>' . $this->title . '</h2>';
-    echo '<div>' . $this->originaLanguage . '</div>';
-    echo '<p>' . $this->description . '</p>';
-    echo '<div>' . $this->vote . '</div>';
-    echo '<div>' . $this->filmDirector . '</div>';
+    echo '<div> <strong> Lingua: </strong>' . $this->originaLanguage . '</div>';
+    echo '<div> <strong> Descrizione: </strong> ' . $this->description . '</div>';
+    echo '<div> <strong> Voto: </strong> ' . $this->vote . '</div>';
+    echo '<div> <strong> Regista: </strong> ' . $this->filmDirector . '</div>';
+    echo '</div>';
   }
 }
 
 $movieCard1 = new Movie($movieList[0]);
 /* var_dump($movieCard1); */
-echo $movieCard1->dataPrint();
+/* echo $movieCard1->dataPrint(); */
 
 $movieCard2 = new Movie($movieList[1]);
 /* var_dump($movieCard2); */
-echo $movieCard2->dataPrint();
+/* echo $movieCard2->dataPrint(); */
 
 ?>
 
@@ -54,10 +56,22 @@ echo $movieCard2->dataPrint();
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MyMovieList</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
+  <header>
+    <h1>MyMovieList</h1>
+  </header>
 
+  <div class="container">
+    <div class="cardbox">
+      <?php echo $movieCard1->dataPrint() ?>
+    </div>
+    <div class="cardbox">
+      <?php echo $movieCard2->dataPrint() ?>
+    </div>
+  </div>
 </body>
 
 </html>
