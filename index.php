@@ -22,13 +22,26 @@ class Movie
     $this->vote = $_movieData['vote'];
     $this->filmDirector = $_movieData['filmDirector'];
   }
+
+  public function dataPrint()
+  {
+    echo $this->poster;
+    echo '<h2>' . $this->title . '</h2>';
+    echo '<div>' . $this->originaLanguage . '</div>';
+    echo '<p>' . $this->description . '</p>';
+    echo '<div>' . $this->vote . '</div>';
+    echo '<div>' . $this->filmDirector . '</div>';
+  }
 }
 
 $movieCard1 = new Movie($movieList[0]);
-var_dump($movieCard1);
+/* var_dump($movieCard1); */
+echo $movieCard1->dataPrint();
 
 $movieCard2 = new Movie($movieList[1]);
-var_dump($movieCard2);
+/* var_dump($movieCard2); */
+echo $movieCard2->dataPrint();
+
 ?>
 
 <!-- HTML -->
