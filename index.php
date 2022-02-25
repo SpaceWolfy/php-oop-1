@@ -4,6 +4,7 @@ include './db/database.php';
 
 class Movie
 {
+  /* Milestone 1 */
   public $id;
   public $poster;
   public $title;
@@ -12,6 +13,7 @@ class Movie
   public $vote;
   public $filmDirector;
 
+  /* Milestone 2 */
   function __construct(array $_movieData)
   {
     $this->id = $_movieData['id'];
@@ -23,6 +25,7 @@ class Movie
     $this->filmDirector = $_movieData['filmDirector'];
   }
 
+  /* Milestone 3 */
   public function dataPrint()
   {
     echo $this->poster;
@@ -36,6 +39,7 @@ class Movie
   }
 }
 
+/* Milestone 4 */
 $movieCard1 = new Movie($movieList[0]);
 /* var_dump($movieCard1); */
 /* echo $movieCard1->dataPrint(); */
