@@ -3,7 +3,7 @@
 $movieList = [
   [
     'id' => 1,
-    'poster' => '<img src="https://m.media-amazon.com/images/I/71c-O3GaxLL._AC_SY606_.jpg">',
+    'poster' => '<img class="poster" src="https://m.media-amazon.com/images/I/71c-O3GaxLL._AC_SY606_.jpg">',
     'title' => 'Guerriglia spaziale',
     'language' => 'droidspeak',
     'description' => 'Lorem ipsum',
@@ -12,7 +12,7 @@ $movieList = [
   ],
   [
     'id' => 2,
-    'poster' => '<img src="https://m.media-amazon.com/images/I/91PN+Yif5kL._AC_SL1500_.jpg">',
+    'poster' => '<img class="poster" src="https://m.media-amazon.com/images/I/91PN+Yif5kL._AC_SL1500_.jpg">',
     'title' => 'Kingsman',
     'language' => 'eng',
     'description' => 'Ipsum Lorem',
